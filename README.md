@@ -18,3 +18,7 @@ chmod +x check-dependencies.sh
 ```sh
 ./subash example.com ~/Document/test
 ```
+## Thanks to:
+[tomnomnom]
+[Edu4rdSHL]
+[OWASP]

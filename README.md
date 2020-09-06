@@ -10,6 +10,8 @@ Merged multiple tools for more efficient subdomain discovery which includes [ass
 git clone https://github.com/m4xx101/subash.git
 cd subash
 chmod +x check-dependencies.sh
+chmod +x subash.sh
+
 ./check-dependencies.sh
 ```
 

@@ -1,6 +1,6 @@
 # subash
 
-Merged multiple tools for more efficient subdomain discovery which includes [assetfinder, cartsh, findomain, jldc, subfinder, amass] it automatically short all found subdomain and remove similar entries and than run httprobe against it and store both lists to the give path.
+Merged multiple tools for more efficient subdomain discovery which includes [assetfinder, cartsh, findomain, jldc, subfinder, amass] it automatically sort all found subdomain and remove similar entries and than run httprobe against it and store both lists to the give path.
 
 ## Usage:
 

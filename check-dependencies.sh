@@ -1,5 +1,16 @@
 #!/bin/bash
 
+banner()
+{
+  echo "+------------------------------------------+"
+  printf "| %-40s |\n" "`date`"
+  echo "|                                          |"
+  printf "|`tput bold` %-40s `tput sgr0`|\n" "$@"
+  echo "+------------------------------------------+"
+}
+
+banner "Installing all the required tools"
+
 if ! command -v lolcat &> /dev/null
 then
     read -p "lolcat not found, do you want to install Y/N?" input0
@@ -24,6 +35,34 @@ then
     sudo tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz |lolcat
     echo "Setting env varaible..."|lolcat 
     sudo export PATH=$PATH:/usr/local/go/bin
+    else
+        echo "Skipping this...."
+    fi
+fi
+
+sleep 1
+
+if ! command -v anew &> /dev/null
+then
+    read -p "anew not found, do you want to install Y/N?" input2
+    if [[ $input2 -eq "Y" || $input2 -eq "y" ]]
+    then
+        echo "Installing assetfinder in system...."|lolcat
+        go get -u github.com/tomnomnom/anew
+    else
+        echo "Skipping this...."
+    fi
+fi
+
+sleep 1
+
+if ! command -v jq &> /dev/null
+then
+    read -p "jq not found, do you want to install Y/N?" input0
+    if [[ $input0 -eq "Y" || $input0 -eq "y" ]]
+    then
+        echo "Installing jq in system..."
+        sudo apt-get jq lolcat -y
     else
         echo "Skipping this...."
     fi
@@ -62,11 +101,11 @@ sleep 1
 
 if ! command -v subfinder &> /dev/null
 then
-    read -p "subfinder not found, do you want to install Y/N?" input4
-    if [[ $input4 -eq "Y" || $input4 -eq "y" ]]
+    read -p "subfinder not found, do you want to install Y/N?" input2
+    if [[ $input2 -eq "Y" || $input2 -eq "y" ]]
     then
         echo "Installing subfinder in system...."|lolcat
-        sudo apt-get install subfinder -y |lolcat
+        GO111MODULE=on go get -u -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
     else
         echo "Skipping this...."
     fi

@@ -18,6 +18,7 @@ then
     then
         echo "Installing lolcat in system just for nice font colorsss...."
         sudo apt-get install lolcat -y
+        gem install lolcat
     else
         echo "Skipping this...."
     fi
@@ -35,6 +36,7 @@ then
     sudo tar -C /usr/local -xzf go1.14.3.linux-amd64.tar.gz |lolcat
     echo "Setting env varaible..."|lolcat 
     sudo export PATH=$PATH:/usr/local/go/bin
+    sudo export GOPATH=$HOME/go
     else
         echo "Skipping this...."
     fi
@@ -91,7 +93,7 @@ then
     then
         echo "Installing findomain in system...."|lolcat 
         wget https://github.com/Edu4rdSHL/findomain/releases/download/2.1.3/findomain-linux |lolcat
-        sudo mv findomain-linux /usr/local/bin
+        sudo mv findomain-linux /usr/local/bin/findomain
     else
         echo "Skipping this...."
     fi

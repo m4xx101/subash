@@ -1,6 +1,6 @@
 # subash
 
-Merged multiple tools for more efficient subdomain discovery which includes [assetfinder, crtsh, findomain, jldc, subfinder] it automatically sort all found subdomain and remove similar entries and than run httprobe against it and store both lists.
+Merged multiple tools for more efficient subdomain discovery which includes [assetfinder, crtsh, findomain, jldc, subfinder, amass] it automatically sort all found subdomain and remove similar entries and than run httprobe against it and store both lists.
 
 ## Usage:
 
